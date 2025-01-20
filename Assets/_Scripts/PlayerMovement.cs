@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         inputX = Input.GetAxis("Horizontal");
 
-        if(Input.GetKeyDown(KeyCode.W) && GroundChecker.isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && GroundChecker.isGrounded)
         {
             isJumpingInput = true;
         }
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = inputX * Time.deltaTime * MoveSpeed;
         PlayerRb.linearVelocity = new Vector2(moveInput, PlayerRb.linearVelocityY);
 
-        if(isJumpingInput)
+        if (isJumpingInput)
         {
             PlayerRb.AddForce(new Vector2(0, JumpPower), ForceMode2D.Impulse);
             isJumpingInput = false;

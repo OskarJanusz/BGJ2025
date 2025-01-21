@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WalkEnemyScript : MonoBehaviour
 {
-    [SerializeField] private float EnemyHealth = 1.0f;
+    [SerializeField] private float EnemyHealth = 6.0f;
     [SerializeField] private float EnemySpeed = 5.0f;
     [SerializeField] private Transform LeftPoint;
     [SerializeField] private Transform RightPoint;
@@ -27,7 +27,8 @@ public class WalkEnemyScript : MonoBehaviour
         if(isMovingRight)
         {
             transform.position = Vector3.MoveTowards(transform.position, RightPointPosition, MoveValue);
-            if(transform.position == RightPointPosition)
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+            if (transform.position == RightPointPosition)
             {
                 isMovingRight = false;
             }
@@ -36,6 +37,7 @@ public class WalkEnemyScript : MonoBehaviour
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, LeftPointPosition, MoveValue);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             if (transform.position == LeftPointPosition)
             {
                 isMovingRight = true;
@@ -50,7 +52,7 @@ public class WalkEnemyScript : MonoBehaviour
             playerMovement.TakeDamage();
         }
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage = 1.0f)
     {
         EnemyHealth -= damage;
         if (EnemyHealth <= 0)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -40,5 +41,10 @@ public class PlayerMovement : MonoBehaviour
     public bool IsMoving()
     {
         return inputX != 0;
+    }
+
+    public void TakeDamage()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         inputX = Input.GetAxis("Horizontal");
-
+        
         if (Input.GetKeyDown(KeyCode.W) && GroundChecker.isGrounded)
         {
             isJumpingInput = true;
@@ -30,5 +30,15 @@ public class PlayerMovement : MonoBehaviour
             PlayerRb.AddForce(new Vector2(0, JumpPower), ForceMode2D.Impulse);
             isJumpingInput = false;
         }
+    }
+
+    public float GetCurrentInputX()
+    {
+        return inputX;
+    }
+
+    public bool IsMoving()
+    {
+        return inputX != 0;
     }
 }

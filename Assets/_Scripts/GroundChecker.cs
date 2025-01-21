@@ -18,7 +18,7 @@ public class GroundChecker : MonoBehaviour
     {
         if (collision.CompareTag(groundTag))
         {
-            isGrounded = true;
+            isGrounded = false;
         }
     }
 }

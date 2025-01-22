@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyHealth: 5
-  EnemySpeed: 5
+  EnemySpeed: 12
   LeftPoint: {fileID: 6272476506222872501}
   RightPoint: {fileID: 8793641768059953667}
   EnemyDeathSound: {fileID: 8300000, guid: 609c8297b1a0efc42b1a47b36f06ce4f, type: 3}

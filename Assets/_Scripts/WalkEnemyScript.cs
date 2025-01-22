@@ -58,7 +58,7 @@ public class WalkEnemyScript : MonoBehaviour
         EnemyHealth -= damage;
         if (EnemyHealth <= 0)
         {
-            AudioSource.PlayClipAtPoint(EnemyDeathSound, transform.position);
+            AudioSource.PlayClipAtPoint(EnemyDeathSound, transform.position, 10.0f);
             Destroy(gameObject);
         }
     }

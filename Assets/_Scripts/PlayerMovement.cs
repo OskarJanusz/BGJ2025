@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && GroundChecker.isGrounded)
         {
             isJumpingInput = true;
-            AudioSource.PlayClipAtPoint(JumpSound, transform.position);
+            AudioSource.PlayClipAtPoint(JumpSound, transform.position, 10.0f);
 
         }
     }

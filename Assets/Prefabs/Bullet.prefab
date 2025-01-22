@@ -190,4 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3bd7027bf92cc45821c81e96eb4953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyDeath: {fileID: 8300000, guid: 609c8297b1a0efc42b1a47b36f06ce4f, type: 3}
+  BulletSound: {fileID: 8300000, guid: 79b07e857eeac3142b8b5002e6947a8d, type: 3}
   BulletSpeed: 13.5

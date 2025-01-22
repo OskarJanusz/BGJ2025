@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GroundChecker GroundChecker;
     [SerializeField] private float MoveSpeed = 5f;
     [SerializeField] private float JumpPower = 5f;
+    [SerializeField] private AudioClip JumpSound;
 
     private float inputX;
     private bool isJumpingInput = false;
@@ -18,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && GroundChecker.isGrounded)
         {
             isJumpingInput = true;
+            AudioSource.PlayClipAtPoint(JumpSound, transform.position);
+
         }
     }
 

@@ -40865,6 +40865,7 @@ MonoBehaviour:
   GroundChecker: {fileID: 1584228260}
   MoveSpeed: 500
   JumpPower: 19
+  JumpSound: {fileID: 8300000, guid: 34c84d7cda19d1f4ebc7b88a427a4f7b, type: 3}
 --- !u!114 &1903997663
 MonoBehaviour:
   m_ObjectHideFlags: 0

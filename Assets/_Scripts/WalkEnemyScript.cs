@@ -6,6 +6,7 @@ public class WalkEnemyScript : MonoBehaviour
     [SerializeField] private float EnemySpeed = 5.0f;
     [SerializeField] private Transform LeftPoint;
     [SerializeField] private Transform RightPoint;
+    [SerializeField] AudioClip EnemyDeathSound;
 
     private Rigidbody2D EnemyRb;
     private bool isMovingRight = true;
@@ -57,6 +58,7 @@ public class WalkEnemyScript : MonoBehaviour
         EnemyHealth -= damage;
         if (EnemyHealth <= 0)
         {
+            AudioSource.PlayClipAtPoint(EnemyDeathSound, transform.position);
             Destroy(gameObject);
         }
     }

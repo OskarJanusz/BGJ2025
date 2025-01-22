@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private AudioClip EnemyDeath;
+    [SerializeField] private AudioClip BulletSound;
+
     public float BulletSpeed;
     private Rigidbody2D BulletRb;
 
@@ -9,6 +12,7 @@ public class Bullet : MonoBehaviour
     {
         BulletRb = GetComponent<Rigidbody2D>();
         BulletRb.linearVelocity = transform.right * BulletSpeed;
+        AudioSource.PlayClipAtPoint(BulletSound, transform.position);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,6 +21,7 @@ public class Bullet : MonoBehaviour
 
         if (enemy != null)
         {
+            AudioSource.PlayClipAtPoint(EnemyDeath, transform.position);
             enemy.TakeDamage(1.0f);
         }
         Destroy(gameObject);

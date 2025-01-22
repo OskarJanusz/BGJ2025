@@ -9,8 +9,8 @@ public class ShootingSystem : MonoBehaviour
     public Transform ShootingPoint;
     public GameObject BulletPrefab;
 
-    private float Timer = 0.25f;
-    private float WaitTime = 0.25f;
+    private float Timer = 0.35f;
+    private float WaitTime = 0.35f;
 
     void Update()
     {

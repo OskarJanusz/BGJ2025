@@ -8,12 +8,14 @@ public class MenuUI : MonoBehaviour
     [SerializeField] private Button HowToPlayButton;
     [SerializeField] private Button QuitButton;
     [SerializeField] private Button BackButton;
+    [SerializeField] private Button PlayJury;
     private void Start()
     {
         PlayButton.onClick.AddListener(StartGame);
         HowToPlayButton.onClick.AddListener(HowToPlayScene);
         QuitButton.onClick.AddListener(QuitGame);
         BackButton.onClick.AddListener(GoBack);
+        PlayJury.onClick.AddListener(PlayAsJury);
     }
 
     private void QuitGame()
@@ -34,5 +36,10 @@ public class MenuUI : MonoBehaviour
     public void GoBack()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void PlayAsJury()
+    {
+        SceneManager.LoadScene("Lvl_01_J");
     }
 }

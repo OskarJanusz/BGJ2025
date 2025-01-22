@@ -404,7 +404,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7233582396845823607, guid: 085bfee1023b6a24a918b26a4d05e478, type: 3}
+  m_Sprite: {fileID: -4364034832326165938, guid: 8358486bb582fa0419007b89b808f364, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1143,6 +1143,7 @@ MonoBehaviour:
   HowToPlayButton: {fileID: 0}
   QuitButton: {fileID: 0}
   BackButton: {fileID: 1832376526}
+  PlayJury: {fileID: 0}
 --- !u!1 &1814998140
 GameObject:
   m_ObjectHideFlags: 0

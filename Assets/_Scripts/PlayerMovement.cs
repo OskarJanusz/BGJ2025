@@ -48,6 +48,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("DieScene");
     }
 }
